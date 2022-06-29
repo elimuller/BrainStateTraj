@@ -7,7 +7,7 @@
 % Created by Eli Muller 2020
 
 % Load data
-X = [];
+X = []; % observation x variable
 
 
 % ------------- PCA
@@ -18,10 +18,10 @@ n_pcs = 10; % Choose data dimensionality
 %------------- LDA
 
 % Define data classes (divisions)
-X1 = pc_val(1:div1,n_pcs);
-X2 = pc_val(div1+1:div2,n_pcs);
-X3 = pc_val(div2+1:div3,n_pcs);
-X4 = pc_val(div4+1:div4,n_pcs);
+X1 = pc_val(1:div1,1:n_pcs);
+X2 = pc_val(div1+1:div2,1:n_pcs);
+X3 = pc_val(div2+1:div3,1:n_pcs);
+X4 = pc_val(div4+1:div4,1:n_pcs);
 
 % Class sizes
 N1 = size(X1,1);
